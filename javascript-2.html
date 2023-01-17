@@ -189,11 +189,79 @@
 
         console.log(auris);
 
+
+        //eger dizi içerisnde arama yapmak istersek:
+        //eger indexof("x") olarak arattıgımızda -1 degeri donuyorsa 
+        //aranan değer burada yok demektir. Dolayısıyla
+
+        if (marka.indexOf("mazda")!==-1 ){
+            console.log("bulundu");
+        }else{
+            console.log("bulamadım");
+        }
+
+
+        //OBJECT (NESNE)
+        //obje tanımlaması yaparken :
+
+        //1- suslu parantezler içerisine gerekli bilgileri gireviliriz
+        var opel={
+            marka:"opel",
+            model:"corsa",
+            yil:"2015",
+            renk:"mavi",
+            otomatil:true
+
+        };
+        //ulaşılmak istenilen bilgilere bu 3 şekildede ulaşabilirz:
+        console.log(opel);
+        console.log(opel.marka);
+        console.log(opel["renk"]);
+
+
+        //2- Ayrıca bu şekilde bir obje tanımlayıp içine bilgiler ekleyebiliriz
+        var toyota=new Object();
+        toyota.marka="toyota";
+        toyota.model="yaris";
+        toyota.yil="2012";
+        toyota.renk="kirmizi";
+        toyota.otomatik=true;
+
+        console.log(toyota.model);
+
+        toyota.model="auris";//şeklinde değiştirilede blilir
+
+        console.log(toyota);
+
+        //Ayrıca objeler dizilerin içerisinde de kullanılabilir
+
+        var arabalar=[
+        {
+            marka:"opel",
+            model:"corsa",
+            yil:"2015",
+            renk:"mavi",
+            otomatil:true
+        },
+        {
+            marka:"mazda",
+            model:"cx-3",
+            yil:"2017",
+            renk:"gri",
+            otomatil:true
+        }
+        ];
+
+        console.log(arabalar);//butun detayları 1 ve 2 şeklinde yazdırır 
+
+        console.log(arabalar[0].marka);//şeklinde 0. elemanın marka adlı objesinin bilgisine ulaşabiliriz
+
+        //ornegin arbaalar dizisindeki marka bilgilerini almak istersek
+        for(var i=0; i<arabalar.length; i++){
+            console.log(arabalar[i].marka);
+        } //bu durumda opel ve mazda yazıcak
+
         
-
-
-
-
 
 
 
