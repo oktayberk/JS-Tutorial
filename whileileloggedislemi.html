@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+        //while dongusu ile dogru k.adi ve parola girene kadar sistem bize sormaya devam ediyor
+        
+        var k_usurnname="guest";
+        var k_password="12345";
+        var logged=false;
+
+        while (logged==false) {
+
+            var username =prompt("kullanıcı adı gır");
+            var password = prompt("pass gir ");
+
+            if ((k_usurnname==username )&& (k_password==password)) {
+            console.log("giriş yapışdı") ;
+            logged=true;               
+            }else{
+                console.log("hatalı kullanıcı adı veya parola")
+            }
+            
+        }
+
+
+
+    </script>
+
+
+
+
+
+
+</body>
+</html>
