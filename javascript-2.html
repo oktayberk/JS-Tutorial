@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS2</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+        ////////////////////////////////////////////////////////////////////////
+
+        //değişken tanımlamak için var anahtar sözcüğü kullanılır
+        var marka;
+        marka="opel";
+        console.log(marka);
+       
+        //atanan değişken değiştirilebilir:
+        marka="Mazda";
+        console.log(marka);
+
+        //birlikte yazmak istersek
+        var model="astra";
+        console.log(marka+" "+model);
+
+        //sayısal ifade
+        var maxhiz=240;
+        var yakitdeposu=52;
+
+        //bool turunde bir ifade :
+        var otomatik=true;
+        console.log(otomatik); //true doner
+
+
+        //kullanıcıdan veri almak için prompt kullanılır:
+        marka=prompt("marka");
+        console.log("marka için girilen deger:"+marka);
+
+        //eger promt ile sayısal ifade alırsak string olarak okur. 
+        //Bu yuzden bu ifadeninsayısal oldugunu numebr ile belirtmemiz gerekir
+        var not1=prompt("not1");
+        var not2=prompt("not2");
+        var ortalama=(Number(not1)+Number(not2))/2; //şeklnde belirtmeliyiz
+        console.log(ortalama);
+
+        ////////////////////////////////////////////////////////////////
+        //OPERATORLER
+    
+
+        //matematiksel operatörler jav avb. aynı 
+        var x = 10;
+        x++; //x i 1 arttırır
+        x=x+1; //x i 1 arttırır
+
+
+        //Karşılaştırma operatorleri
+        var x=10;
+        var y=20;
+        var z=30;
+        var sonuc= x>y ;
+        console.log(sonuc); //x y den buyukmu dedık false verdi
+
+        console.log(x<y); // true degerini aldık
+        console.log(x>=y);//false verdi
+        console.log(x==y);//x y ye eşit mi ? sorusu
+        console.log(x=="10"); // true degerini aldık burada string mi int mi diye bakmadan direk eşitmi diye bakıyor
+        console.log(x==="10"); //burada false aldık. Cunku burada string int uyumunu da kontrol etti
+        console.log(x!=y); // burada true gelir cunku x z ye eşit değildir dedik
+
+
+        //Mantıksal operatörler
+        
+        // && ve operatorudur. iki tarafında true oldugu durudma true diger durumlarda false dondurur
+        // || veya(yada) operatorunde bir tarafın true olması durumunda true doner. İki taraf da false olursa false doner. 
+        // ! değil operatöründe tersi alınır
+
+        console.log((x>y) && (y<z)); //false doner
+
+        console.log((x>y) || (y<z)); //true doner
+        
+        console.log((x>z)); //false doner
+        console.log(!(x>z)); //true doner
+        
+
+        ////////////////////////////////
+        //KOŞUL İFADELERİ
+        var marka="opel";
+        var model="astra" ;
+        var otomatik="yes";
+
+        //if/else statement
+        
+        //burada if else calısırken değilse olarak kullanır
+        if(otomatik=="yes"){
+            console.log("araç otomatiktir");
+        }else{
+            console.log("arac otomatik degildir");
+        }
+
+        //eger biz otomatige true yada false deger verirsek true ise if aclısır false ise calısmaz
+        otomatik=true;
+        if(otomatik){
+            console.log("arac otomatiktir truedongusu");
+        }
+        //otomatik=false durumunda if blogu hiç çalışmaz. yani if true ise calısır false ise calısmaz
+
+        //Switch statement
+
+        var vites="1";
+
+        if (vites=="1") {
+            console.log("arac manuel");
+            
+        } else if (vites=="2"){
+        
+            console.log("arac otomatik");
+        }else{
+            console.log("yanlıs tus");
+        }
+
+
+        switch(vites){
+            case '1':
+                console.log("aracmanuel");
+                break; //break yazma nedenimiz switch ifadesinden cıkmak
+            
+            case '2':
+                console.log("oto");
+                break;
+            default://eger 1 ve 2 dışı deger girilirse
+                console.log("yanlıs deger")
+        }
+
+        //burada switch ve if eşdeger şekilde kullanıldı
+
+        /////////////////////////////////////////////
+
+        //DONGULER
+
+        //For döngüsü
+
+        for (var i=0; i<10; i++){ //i 10 dan kucu kodlugu surece tekrarlanıyor
+            console.log(i);
+        }
+
+        var sehirler=["koaceli","istanbul","izmir","adana"];
+
+        for (var i=0; i<sehirler.length ; i++){ //.lenght ile sehirler dizisinin eleman saysıını goruyoruz
+            console.log(sehirler[i]);
+        }
+
+
+        //WHILE DONGUSU
+
+
+        var i=1;
+        while(i<=10){
+            console.log(i);
+            i++;
+        }// burada i <10 olana kadar true donuyor daha sonra false oluyor ve dongu bitiyor
+
+
+        var i=0;
+        while(i<sehirler.length){
+            console.log(sehirler[i]);
+            i++;
+        }
+
+        //DİZİLER
+
+        var marka=["opel","toyata","mazda","reno"];
+        //veya:
+        var model=new Array("corsa","yaris","cx-3","clio");
+
+        console.log(marka[0]);
+        console.log(model[0]);
+
+        //eger diziye deger eklemek istersek
+        
+        var auris=["toyota","auris",42,true];
+        auris.push("blue"); //sonuna ekler
+        auris.unshift("HB");//basına ekler
+        auris.pop();//son eleman silinir
+        auris.shift();//en bastaki eleman silinjir 
+
+        console.log(auris);
+
+        
+
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+</html>
